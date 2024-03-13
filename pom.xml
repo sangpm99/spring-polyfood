@@ -12,8 +12,8 @@
     <artifactId>polyfood</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <!-- Tích hợp sang war -->
-    <packaging>war</packaging>
+    <!-- Tích hợp sang jar -->
+    <packaging>jar</packaging>
 
 
     <name>polyfood</name>
@@ -63,13 +63,6 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--            <version>3.1.4</version>-->
-<!--        </dependency>-->
-
         <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-crypto -->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -101,27 +94,7 @@
             <artifactId>poi-ooxml</artifactId>
             <version>5.2.5</version>
         </dependency>
-
-
-
     </dependencies>
-
-    <!-- Profile de build file WAR -->
-    <profiles>
-        <profile>
-            <id>war</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-war-plugin</artifactId>
-                        <version>3.3.2</version>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
 
     <build>
         <plugins>
@@ -130,12 +103,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- Build WAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.2</version>
-            </plugin>
         </plugins>
     </build>
 
