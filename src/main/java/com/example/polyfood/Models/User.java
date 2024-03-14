@@ -39,7 +39,7 @@ public class User {
     @Column(name = "accountid")
     private int accountId;
     @ManyToOne
-    @JoinColumn(name = "accountid", insertable = false, updatable = false)
+    @JoinColumn(name = "accountid",referencedColumnName = "accountid", insertable = false, updatable = false)
     @JsonBackReference
     private Account account;
 

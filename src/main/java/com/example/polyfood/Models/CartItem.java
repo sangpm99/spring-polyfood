@@ -16,14 +16,14 @@ public class CartItem {
     @Column(name = "productid")
     private int productId;
     @ManyToOne
-    @JoinColumn(name = "productid", insertable = false, updatable = false)
+    @JoinColumn(name = "productid", referencedColumnName = "productid", insertable = false, updatable = false)
     @JsonBackReference
     private Product product;
 
     @Column(name = "cartid")
     private int cartId;
     @ManyToOne
-    @JoinColumn(name = "cartid", insertable = false, updatable = false)
+    @JoinColumn(name = "cartid", referencedColumnName = "cartid", insertable = false, updatable = false)
     @JsonBackReference
     private Cart cart;
 

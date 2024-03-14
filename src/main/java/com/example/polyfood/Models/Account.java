@@ -33,7 +33,7 @@ public class Account {
     @Column(name = "decentralizationid")
     private int decentralizationId;
     @ManyToOne
-    @JoinColumn(name = "decentralizationid", insertable = false, updatable = false)
+    @JoinColumn(name = "decentralizationid", referencedColumnName = "decentralizationid", insertable = false, updatable = false)
     @JsonBackReference
     private Decentralization decentralization;
 

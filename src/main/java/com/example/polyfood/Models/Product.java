@@ -33,7 +33,7 @@ public class Product {
     @Column(name = "producttypeid")
     private int productTypeId;
     @ManyToOne
-    @JoinColumn(name = "producttypeid", insertable = false, updatable = false)
+    @JoinColumn(name = "producttypeid", referencedColumnName = "producttypeid", insertable = false, updatable = false)
     @JsonBackReference
     private ProductType producttype;
 

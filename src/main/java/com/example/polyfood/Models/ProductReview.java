@@ -16,14 +16,14 @@ public class ProductReview {
     @Column(name = "productid")
     private int productId;
     @ManyToOne
-    @JoinColumn(name = "productid", insertable = false, updatable = false)
+    @JoinColumn(name = "productid",referencedColumnName = "productid", insertable = false, updatable = false)
     @JsonBackReference
     private Product product;
 
     @Column(name = "userid")
     private int userId;
     @ManyToOne
-    @JoinColumn(name = "userid", insertable = false, updatable = false)
+    @JoinColumn(name = "userid",referencedColumnName = "userid", insertable = false, updatable = false)
     @JsonBackReference
     private User user;
 

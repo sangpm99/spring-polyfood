@@ -21,14 +21,14 @@ public class Orders {
     @Column(name = "paymentid")
     private int paymentId;
     @ManyToOne
-    @JoinColumn(name = "paymentid", insertable = false, updatable = false)
+    @JoinColumn(name = "paymentid", referencedColumnName = "paymentid", insertable = false, updatable = false)
     @JsonBackReference
     private Payment payment;
 
     @Column(name = "userid")
     private int userId;
     @ManyToOne
-    @JoinColumn(name = "userid", insertable = false, updatable = false)
+    @JoinColumn(name = "userid",referencedColumnName = "userid", insertable = false, updatable = false)
     @JsonBackReference
     private User user;
 
@@ -53,7 +53,7 @@ public class Orders {
     @Column(name = "orderstatusid")
     private int orderStatusId;
     @ManyToOne
-    @JoinColumn(name = "orderstatusid", insertable = false, updatable = false)
+    @JoinColumn(name = "orderstatusid",referencedColumnName = "orderstatusid", insertable = false, updatable = false)
     @JsonBackReference
     private OrderStatus orderstatus;
 

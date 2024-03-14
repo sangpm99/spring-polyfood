@@ -21,7 +21,7 @@ public class Cart {
     @Column(name = "userid")
     private int userId;
     @ManyToOne
-    @JoinColumn(name = "userid", insertable = false, updatable = false)
+    @JoinColumn(name = "userid", referencedColumnName = "userid", insertable = false, updatable = false)
     @JsonBackReference
     private User user;
 
