@@ -14,7 +14,7 @@ public class ProductDetail {
     @Column(name = "productid")
     private int productId;
     @ManyToOne
-    @JoinColumn(name = "productid", referencedColumnName = "producid", insertable = false, updatable = false)
+    @JoinColumn(name = "productid", referencedColumnName = "productid", insertable = false, updatable = false)
     @JsonBackReference
     private Product product;
 
